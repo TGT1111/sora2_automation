@@ -1,0 +1,3 @@
+Customer: I've been trying to connect the device to Wi-Fi for hours.
+Agent: Can you check if airplane mode is off?
+Customer: Oh, that fixed it! But the manual wasn’t clear.

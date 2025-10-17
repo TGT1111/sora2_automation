@@ -1,0 +1,3 @@
+id,issue,notes
+1,login,Customer keeps forgetting password; suggest clearer reset flow
+2,payment,Card declined error message too vague

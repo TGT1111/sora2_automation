@@ -1,0 +1,14 @@
+=== Content Insights Report ===
+
+File: support_log.csv
+  - Difficult text; rewrite with shorter sentences and simpler words.
+  - Tone is negative; review for frustration or unclear guidance.
+
+File: lesson_notes.txt
+  - Difficult text; rewrite with shorter sentences and simpler words.
+  - Tone is negative; review for frustration or unclear guidance.
+
+File: call_feedback.txt
+  - Easy to read; accessible for general users.
+  - Tone is positive; conveys helpful or friendly language.
+

@@ -1,0 +1,1 @@
+topic: using predictive analytics in business. common struggle: understanding model accuracy metrics.
