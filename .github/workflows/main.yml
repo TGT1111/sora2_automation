@@ -1,0 +1,37 @@
+name: Run Sora2 Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Execute Sora 2 pipeline
+        run: |
+          source .venv/bin/activate
+          ./run_pipeline.sh
+
+      - name: Upload insights
+        uses: actions/upload-artifact@v4
+        with:
+          name: sora2_insights
+          path: analysis/insights.txt
