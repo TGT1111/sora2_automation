@@ -20,14 +20,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m venv .venv
-          source .venv/bin/activate
           pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Execute Sora 2 pipeline
         run: |
-          source .venv/bin/activate
+          chmod +x run_pipeline.sh
           ./run_pipeline.sh
 
       - name: Upload insights
@@ -35,3 +33,4 @@ jobs:
         with:
           name: sora2_insights
           path: analysis/insights.txt
+
