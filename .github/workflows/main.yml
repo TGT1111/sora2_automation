@@ -28,9 +28,16 @@ jobs:
           chmod +x run_pipeline.sh
           ./run_pipeline.sh
 
-      - name: Upload insights
+      - name: Generate visualizations
+        run: |
+          pip install pandas matplotlib
+          python3 src/agents/visualizer.py
+
+      - name: Upload insights and figures
         uses: actions/upload-artifact@v4
         with:
-          name: sora2_insights
-          path: analysis/insights.txt
+          name: sora2_outputs
+          path: |
+            analysis/insights.txt
+            analysis/figures/*.png
 
